@@ -1,3 +1,6 @@
+/*Hoja de trabajo #7
+Marinés García 23391 */
+
 import java.util.Comparator;
 import java.util.Scanner;
 
@@ -10,11 +13,13 @@ public class Diccionario {
         Scanner sc = new Scanner(System.in);
         Boolean salir = false;
 
+        //Idioma como objetos
         Comparator<String> comparator = Comparator.naturalOrder();
         BinarySearchTree<String, Association<String, String, String>> spanish = new BinarySearchTree<String, Association<String, String, String>>(comparator);
         BinarySearchTree<String, Association<String, String, String>> french = new BinarySearchTree<String, Association<String, String, String>>(comparator);
         BinarySearchTree<String, Association<String, String, String>> english = new BinarySearchTree<String, Association<String, String, String>>(comparator);
 
+        //Crea arboles de cada idioma
         LeerTxt arbol = new LeerTxt();
         arbol.creatTree(english, spanish, french);
 
@@ -52,6 +57,7 @@ public class Diccionario {
         sc.close();
     }
 
+    //Ordena palabras de árbol
     private static void palabrasOrdenadas(BinarySearchTree<String, Association<String, String, String>> tree) {
         IWalk<Association<String, String, String>> printWalk = association -> {
             System.out.println(

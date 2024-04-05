@@ -1,4 +1,3 @@
-
 public interface ITree<K, V>{
 
     void insert(K key, V value);

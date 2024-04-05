@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 
 public class SaveInArrayListWalk<V> implements IWalk<V>{

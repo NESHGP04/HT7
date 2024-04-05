@@ -1,5 +1,3 @@
-
-
 public class Association<K,V1,V2> {
 
     private K key;
